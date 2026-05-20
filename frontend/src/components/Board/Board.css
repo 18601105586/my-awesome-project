@@ -1,25 +1,51 @@
 .board {
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   overflow-x: auto;
-  min-height: 100vh;
-  background: #f5f5f5;
+  min-height: calc(100vh - 70px);
+  background: var(--bg-primary);
+  align-items: flex-start;
+}
+
+.board::-webkit-scrollbar {
+  height: 8px;
+}
+
+.board::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.board::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
 }
 
 .add-column-btn {
-  min-width: 200px;
+  min-width: 280px;
   padding: 1rem;
-  border: 2px dashed #ccc;
+  border: 1px dashed var(--border-primary);
   background: transparent;
   cursor: pointer;
-  border-radius: 8px;
-  font-size: 1rem;
-  color: #666;
-  transition: border-color 0.2s;
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .add-column-btn:hover {
-  border-color: #999;
-  color: #333;
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+.add-column-btn::before {
+  content: '+';
+  font-size: 1.25rem;
 }

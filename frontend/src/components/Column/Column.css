@@ -1,69 +1,109 @@
 .column {
   min-width: 280px;
   max-width: 280px;
-  background: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
+  max-height: calc(100vh - 130px);
+  transition: border-color var(--transition-fast);
+}
+
+.column:hover {
+  border-color: var(--border-primary);
 }
 
 .column-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-secondary);
 }
 
 .column-header h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
   cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
 }
 
 .column-header h3:hover {
-  background: #f5f5f5;
+  background: var(--bg-hover);
 }
 
 .delete-btn {
-  background: none;
+  background: transparent;
   border: none;
   font-size: 1.25rem;
   cursor: pointer;
-  color: #999;
-  padding: 0;
+  color: var(--text-tertiary);
+  padding: 0.25rem;
   line-height: 1;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .delete-btn:hover {
-  color: #d00;
+  background: var(--bg-hover);
+  color: var(--danger);
 }
 
 .column-tasks {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   flex: 1;
   overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.column-tasks::-webkit-scrollbar {
+  width: 4px;
+}
+
+.column-tasks::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 2px;
 }
 
 .add-task-btn {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  background: #fafafa;
+  padding: 0.625rem;
+  border: 1px solid var(--border-secondary);
+  background: transparent;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  transition: background 0.2s;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
 }
 
 .add-task-btn:hover {
-  background: #f0f0f0;
+  background: var(--bg-hover);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.add-task-btn::before {
+  content: '+';
+  color: var(--text-tertiary);
 }
