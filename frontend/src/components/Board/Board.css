@@ -1,0 +1,25 @@
+.board {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.add-column-btn {
+  min-width: 200px;
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #666;
+  transition: border-color 0.2s;
+}
+
+.add-column-btn:hover {
+  border-color: #999;
+  color: #333;
+}

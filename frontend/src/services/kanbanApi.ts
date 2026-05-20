@@ -1,4 +1,4 @@
-import { api, handleApiError } from './api'
+import { api } from './api'
 import type { Column, Task } from '../types'
 
 export const kanbanApi = {

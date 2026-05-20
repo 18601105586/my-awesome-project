@@ -20,7 +20,7 @@ interface KanbanState {
   deleteTask: (id: number) => Promise<void>
 }
 
-export const useKanbanStore = create<KanbanState>((set, get) => ({
+export const useKanbanStore = create<KanbanState>((set) => ({
   columns: [],
   tasks: [],
   isLoading: false,
