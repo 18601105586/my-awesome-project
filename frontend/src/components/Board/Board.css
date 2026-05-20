@@ -1,36 +1,40 @@
 .board {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   padding: 1.5rem;
   overflow-x: auto;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 85px);
   background: var(--bg-primary);
   align-items: flex-start;
 }
 
 .board::-webkit-scrollbar {
-  height: 8px;
+  height: 10px;
 }
 
 .board::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-  border-radius: 4px;
+  background: var(--bg-tertiary);
+  border-radius: 5px;
 }
 
 .board::-webkit-scrollbar-thumb {
-  background: var(--border-primary);
-  border-radius: 4px;
+  background: var(--border-secondary);
+  border-radius: 5px;
+}
+
+.board::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
 }
 
 .add-column-btn {
   min-width: 280px;
-  padding: 1rem;
-  border: 1px dashed var(--border-primary);
-  background: transparent;
+  padding: 1.25rem;
+  border: 2px dashed var(--border-primary);
+  background: var(--bg-secondary);
   cursor: pointer;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   transition: all var(--transition-normal);
   display: flex;
@@ -40,12 +44,16 @@
 }
 
 .add-column-btn:hover {
-  border-color: var(--text-secondary);
-  color: var(--text-primary);
-  background: var(--bg-secondary);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background: rgba(0, 82, 204, 0.04);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .add-column-btn::before {
   content: '+';
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
 }
