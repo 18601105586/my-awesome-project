@@ -1,25 +1,25 @@
 .board {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   padding: 1.5rem;
   overflow-x: auto;
-  min-height: calc(100vh - 85px);
+  min-height: calc(100vh - 75px);
   background: var(--bg-primary);
   align-items: flex-start;
 }
 
 .board::-webkit-scrollbar {
-  height: 10px;
+  height: 8px;
 }
 
 .board::-webkit-scrollbar-track {
-  background: var(--bg-tertiary);
-  border-radius: 5px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
 }
 
 .board::-webkit-scrollbar-thumb {
-  background: var(--border-secondary);
-  border-radius: 5px;
+  background: var(--border-primary);
+  border-radius: 4px;
 }
 
 .board::-webkit-scrollbar-thumb:hover {
@@ -30,7 +30,7 @@
   min-width: 280px;
   padding: 1.25rem;
   border: 2px dashed var(--border-primary);
-  background: var(--bg-secondary);
+  background: transparent;
   cursor: pointer;
   border-radius: var(--radius-xl);
   color: var(--text-secondary);
@@ -44,16 +44,15 @@
 }
 
 .add-column-btn:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
-  background: rgba(0, 82, 204, 0.04);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(13, 153, 255, 0.08);
+  box-shadow: var(--shadow-glow);
 }
 
 .add-column-btn::before {
   content: '+';
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
 }
