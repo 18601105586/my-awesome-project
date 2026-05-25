@@ -1,18 +1,18 @@
 :root {
-  /* Figma inspired bold dark theme */
-  --bg-primary: #1e1e1e;
-  --bg-secondary: #2c2c2c;
-  --bg-tertiary: #3a3a3a;
-  --bg-hover: #444444;
+  /* White/light theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #ffffff;
+  --bg-hover: #f0f1f3;
 
-  --border-primary: #4a4a4a;
-  --border-secondary: #3a3a3a;
+  --border-primary: #e0e0e0;
+  --border-secondary: #d0d0d0;
 
-  --text-primary: #ffffff;
-  --text-secondary: #b0b0b0;
-  --text-tertiary: #808080;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --text-tertiary: #888888;
 
-  /* Figma blue accent */
+  /* Blue accent */
   --accent-primary: #0d99ff;
   --accent-secondary: #0066cc;
   --accent-gradient: linear-gradient(135deg, #0d99ff 0%, #00c4cc 100%);
@@ -26,10 +26,10 @@
   --radius-lg: 8px;
   --radius-xl: 12px;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(13, 153, 255, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(13, 153, 255, 0.25);
 
   --transition-fast: 100ms ease;
   --transition-normal: 180ms ease;
