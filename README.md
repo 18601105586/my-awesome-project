@@ -1,10 +1,10 @@
-# Kanban Board Management System
+# Kanban Board Management System (Beta)
 
-A full-stack kanban board application with Go backend and React frontend.
+A full-stack kanban board application with Node.js/Express backend and React frontend.
 
 ## Tech Stack
 
-- **Backend**: Go, Gin, GORM, SQLite
+- **Backend**: Node.js, Express, SQLite, better-sqlite3
 - **Frontend**: React, TypeScript, Vite, Zustand, TanStack Query, dnd-kit
 
 ## Getting Started
@@ -13,7 +13,7 @@ A full-stack kanban board application with Go backend and React frontend.
 
 ```bash
 cd backend
-go run cmd/server/main.go
+npm start
 ```
 
 Server starts on http://localhost:8080
@@ -65,7 +65,7 @@ Frontend starts on http://localhost:5173
 ### Backend
 ```bash
 cd backend
-go test ./...
+npm test
 ```
 
 ### Frontend
