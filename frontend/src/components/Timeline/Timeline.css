@@ -1,0 +1,77 @@
+.timeline {
+  flex: 1;
+  min-height: 0;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.timeline-header h2 {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.timeline-filters {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.timeline-filters button {
+  padding: 0.3125rem 0.75rem;
+  border: 1px solid var(--border-primary);
+  background: var(--bg-glass);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.timeline-filters button:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-secondary);
+  border-color: var(--border-secondary);
+}
+
+.timeline-filters button.active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.timeline-loading,
+.timeline-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-tertiary);
+}
+
+.timeline-empty p {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.timeline-empty .hint {
+  font-size: 0.8125rem;
+  margin-top: 0.5rem;
+  opacity: 0.6;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}

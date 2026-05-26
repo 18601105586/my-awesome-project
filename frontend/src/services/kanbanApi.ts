@@ -34,7 +34,7 @@ export const kanbanApi = {
   },
 
   async createTask(title: string, columnId: number, description?: string): Promise<Task> {
-    const response = await api.post('/tasks', { title, column_id: columnId, description })
+    const response = await api.post('/tasks', { title, columnId, description })
     return response.data.data
   },
 
@@ -44,7 +44,7 @@ export const kanbanApi = {
   },
 
   async moveTask(id: number, columnId: number, position: number): Promise<Task> {
-    const response = await api.patch(`/tasks/${id}`, { column_id: columnId, position })
+    const response = await api.patch(`/tasks/${id}`, { columnId, newPosition: position })
     return response.data.data
   },
 
