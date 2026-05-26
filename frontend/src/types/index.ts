@@ -2,8 +2,8 @@ export interface Column {
   id: number
   name: string
   position: number
-  created_at: string
-  updated_at: string
+  createdAt: string
+  updatedAt: string
   tasks?: Task[]
 }
 
@@ -11,10 +11,11 @@ export interface Task {
   id: number
   title: string
   description: string
-  column_id: number
+  columnId: number
   position: number
-  created_at: string
-  updated_at: string
+  phase?: string
+  createdAt: string
+  updatedAt: string
   column?: Column
 }
 
